@@ -26,4 +26,3 @@ public class Person {
         return Period.between(birthDate, LocalDate.now());
     }
 }
-    
