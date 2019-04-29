@@ -1,10 +1,10 @@
-package fakes;
+package unittests.fakes;
 
 public class User {
 
     private String username;
 
-    public User(String username){
+    public User(String username) {
         this.username = username;
     }
 

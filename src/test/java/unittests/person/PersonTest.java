@@ -1,4 +1,4 @@
-package person;
+package unittests.person;
 
 import org.junit.Test;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
@@ -13,7 +13,7 @@ public class PersonTest {
     // getFullName
 
     @Test
-    public void getFullNameReturnsFirstnameSpaceLastname(){
+    public void getFullNameReturnsFirstnameSpaceLastname() {
         // TODO implement
         throw new NotImplementedException();
     }

@@ -1,4 +1,4 @@
-package fakes;
+package unittests.fakes;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,26 +15,25 @@ import java.util.stream.Stream;
 public class FileDatabase extends Database {
 
     public static FileDatabase instance;
-
-    public static Database getInstance(){
-        if(instance == null){
-            instance = new FileDatabase();
-        }
-        return instance;
-    }
-
     private final String PATH = "src/main/resources/db.txt";
     private final Path dbPath = Paths.get(PATH);
 
-    public FileDatabase(){
+    public FileDatabase() {
         File f = new File(dbPath.toString());
-        if(!f.exists()){
+        if (!f.exists()) {
             try {
                 f.createNewFile();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
+    }
+
+    public static Database getInstance() {
+        if (instance == null) {
+            instance = new FileDatabase();
+        }
+        return instance;
     }
 
     @Override
@@ -52,7 +51,7 @@ public class FileDatabase extends Database {
     @Override
     public List<User> getUsers() {
         List<User> users = null;
-        try(Stream<String> stream = Files.lines(dbPath)){
+        try (Stream<String> stream = Files.lines(dbPath)) {
             users = stream
                     .map(String::trim)
                     .filter(line -> line.length() > 0)

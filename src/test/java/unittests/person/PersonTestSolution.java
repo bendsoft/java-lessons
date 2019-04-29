@@ -1,4 +1,4 @@
-package person;
+package unittests.person;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -14,7 +14,7 @@ public class PersonTestSolution {
     // getFullName
 
     @Test
-    public void getFullNameReturnsFirstnameSpaceLastname(){
+    public void getFullNameReturnsFirstnameSpaceLastname() {
         Person p = new Person("Hannes", "Meier", null);
 
         String fullName = p.getFullName();

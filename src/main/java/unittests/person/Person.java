@@ -1,4 +1,4 @@
-package person;
+package unittests.person;
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -18,11 +18,11 @@ public class Person {
         this.birthDate = birthDate;
     }
 
-    public String getFullName(){
+    public String getFullName() {
         return firstName + " " + lastName;
     }
 
-    public Period getAge(){
+    public Period getAge() {
         return Period.between(birthDate, LocalDate.now());
     }
 }
